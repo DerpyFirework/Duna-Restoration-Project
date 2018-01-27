@@ -1,0 +1,251 @@
+PQS: Eve
+---PQSMOD: PQSLandControl
+------landClasses: PQSLandControl+LandClass[]
+------scatters: PQSLandControl+LandClassScatter[]
+------useHeightMap: False
+------heightMap: eve_height_new (MapSO)
+------vHeightMax: 3500
+------createColors: True
+------createScatter: True
+------altitudeBlend: 0.05
+------altitudeSeed: 212121
+------altitudeOctaves: 2
+------altitudePersistance: 0.6
+------altitudeFrequency: 12
+------altitudeSimplex: Simplex
+------latitudeBlend: 0.02
+------latitudeSeed: 47373
+------latitudeOctaves: 4
+------latitudePersistance: 0.6
+------latitudeFrequency: 4
+------latitudeSimplex: Simplex
+------longitudeBlend: 0.05
+------longitudeSeed: 768453
+------longitudeOctaves: 4
+------longitudePersistance: 0.6
+------longitudeFrequency: 4
+------longitudeSimplex: Simplex
+------sphere: Eve (PQS)
+------requirements: VertexMapCoords, MeshColorChannel
+------modEnabled: True
+------order: 9999991
+---PQSMOD: PQSMod_VertexColorMapBlend
+------vertexColorMap: eve_coloraddition (MapSO)
+------blend: 0.25
+------sphere: Eve (PQS)
+------requirements: MeshColorChannel
+------modEnabled: True
+------order: 9999992
+---PQSMOD: PQSMod_AltitudeAlpha
+------atmosphereDepth: 4000
+------invert: False
+------sphere: 
+------requirements: Default
+------modEnabled: False
+------order: 999999999
+---PQSMOD: PQSMod_AerialPerspectiveMaterial
+------globalDensity: -1E-05
+------heightFalloff: 6.75
+------atmosphereDepth: 150000
+------DEBUG_SetEveryFrame: True
+------cameraAlt: 0
+------cameraAtmosAlt: 0
+------heightDensAtViewer: 0
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_UVPlanetRelativePosition
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 999999
+---PQSMOD: PQSMod_VertexHeightMap
+------heightMap: eve_height_new (MapSO)
+------heightMapDeformity: 5500
+------heightMapOffset: -1200
+------scaleDeformityByRadius: False
+------sphere: Eve (PQS)
+------requirements: VertexMapCoords, MeshCustomNormals
+------modEnabled: True
+------order: 10
+---PQSMOD: PQSMod_VertexHeightNoiseVertHeight
+------noiseType: RiggedMultifractal
+------deformity: 2200
+------seed: 89347589
+------frequency: 8
+------lacunarity: 3
+------persistance: 0.5
+------octaves: 6
+------mode: Low
+------heightStart: 0.1
+------heightEnd: 1
+------sphere: Eve (PQS)
+------requirements: MeshColorChannel
+------modEnabled: True
+------order: 11
+---PQSMOD: PQSMod_VertexSimplexHeight
+------seed: 3485902
+------deformity: 3200
+------octaves: 6
+------persistence: 0.5
+------frequency: 3
+------sphere: Eve (PQS)
+------requirements: MeshCustomNormals
+------modEnabled: True
+------order: 12
+---PQSMOD: PQSMod_QuadEnhanceCoast
+------coastLessThan: 0
+------oceanFactor: 1
+------coastFactor: 2
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 9999
+---PQSMOD: PQSMod_CelestialBodyTransform
+------body: Eve (CelestialBody)
+------deactivateAltitude: 130000
+------forceRebuildOnTargetChange: False
+------planetFade: PQSMod_CelestialBodyTransform+AltitudeFade
+------secondaryFades: PQSMod_CelestialBodyTransform+AltitudeFade[]
+------editMode: False
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 0
+---PQSMOD: PQSMod_MaterialSetDirection
+------target: 
+------valueName: _sunLightDirection
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_QuadMeshColliders
+------maxLevelOffset: 0
+------physicsMaterial: Ground (UnityEngine.PhysicMaterial)
+------sphere: Eve (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_AerialPerspectiveMaterial
+------globalDensity: -7.5E-06
+------heightFalloff: 0.2
+------atmosphereDepth: 5000
+------DEBUG_SetEveryFrame: False
+------cameraAlt: 0
+------cameraAtmosAlt: 0
+------heightDensAtViewer: 0
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_UVPlanetRelativePosition
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_BlockActivation
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_RemoveQuadMap
+------map: eve_height_new (MapSO)
+------mapDeformity: 0
+------minHeight: 0
+------maxHeight: 0.7
+------sphere: EveOcean (PQS)
+------requirements: VertexMapCoords
+------modEnabled: True
+------order: 1
+---PQSMOD: PQSMod_OceanFX
+------watermain: UnityEngine.Texture2D[]
+------refraction: 
+------bump: 
+------fresnel: 
+------reflection: 
+------framesPerSecond: 10
+------spaceAltitude: 0
+------blendA: 0
+------blendB: 0
+------waterMat: CloudyPlanetMercury (UnityEngine.Material)
+------waterMainLength: 8
+------txIndex: 0
+------texBlend: 0
+------angle: 0
+------specColor: RGBA(0.000, 0.000, 0.000, 0.000)
+------oceanOpacity: 0
+------spaceSurfaceBlend: 0
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_VertexHeightNoiseVertHeight
+------noiseType: RiggedMultifractal
+------deformity: 150
+------seed: 567587
+------frequency: 170
+------lacunarity: 1.5
+------persistance: 0.7
+------octaves: 4
+------mode: Low
+------heightStart: 0.2
+------heightEnd: 1
+------sphere: Eve (PQS)
+------requirements: MeshColorChannel
+------modEnabled: True
+------order: 80
+PQS: EveOcean
+---PQSMOD: PQSMod_AerialPerspectiveMaterial
+------globalDensity: -7.5E-06
+------heightFalloff: 0.2
+------atmosphereDepth: 5000
+------DEBUG_SetEveryFrame: False
+------cameraAlt: 0
+------cameraAtmosAlt: 0
+------heightDensAtViewer: 0
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_UVPlanetRelativePosition
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_BlockActivation
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
+---PQSMOD: PQSMod_RemoveQuadMap
+------map: eve_height_new (MapSO)
+------mapDeformity: 0
+------minHeight: 0
+------maxHeight: 0.7
+------sphere: EveOcean (PQS)
+------requirements: VertexMapCoords
+------modEnabled: True
+------order: 1
+---PQSMOD: PQSMod_OceanFX
+------watermain: UnityEngine.Texture2D[]
+------refraction: 
+------bump: 
+------fresnel: 
+------reflection: 
+------framesPerSecond: 10
+------spaceAltitude: 0
+------blendA: 0
+------blendB: 0
+------waterMat: CloudyPlanetMercury (UnityEngine.Material)
+------waterMainLength: 8
+------txIndex: 0
+------texBlend: 0
+------angle: 0
+------specColor: RGBA(0.000, 0.000, 0.000, 0.000)
+------oceanOpacity: 0
+------spaceSurfaceBlend: 0
+------sphere: EveOcean (PQS)
+------requirements: Default
+------modEnabled: True
+------order: 100
