@@ -10,5 +10,5 @@ But now I shall cry tears of joy, for I have restored the beautiful 0.17-0.21 Du
 
 # Installation Instructions: 
 
-* Install Kopernicus and Module Manager 
+* Install [Kopernicus](https://github.com/Kopernicus/Kopernicus/releases) and Module Manager 
 * Put the DunaRestorationProject folder into GameData
