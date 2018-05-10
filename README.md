@@ -6,6 +6,8 @@
 
 But now I shall cry tears of joy, for I have restored the beautiful 0.17-0.21 Duna that we used to know.
 
+![http://i.imgur.com/x4ruG14.png](http://i.imgur.com/x4ruG14.png)
+
 # Installation Instructions: 
 
 * Install Kopernicus and Module Manager 
